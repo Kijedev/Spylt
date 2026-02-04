@@ -11,7 +11,6 @@ export default function StirUpSection() {
     offset: ["start end", "center center"],
   });
 
-  // Center-out animation
   const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
   return (

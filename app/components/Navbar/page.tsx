@@ -22,7 +22,6 @@ export default function FullscreenNavbar() {
 
   return (
     <>
-      {/* TOP NAV BAR */}
       <nav className="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-8 py-6">
         <span className="cursor-pointer hover:scale-110 transition-transform duration-200">
           <Image
@@ -43,7 +42,6 @@ export default function FullscreenNavbar() {
         </span>
       </nav>
 
-      {/* FULLSCREEN MENU */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -54,7 +52,7 @@ export default function FullscreenNavbar() {
               duration: 1.3,
               ease: [0.77, 0, 0.175, 1],
             }}
-            className="fixed inset-0 z-50 flex bg-[#F6E6D8]"
+            className="fixed inset-0 z-999 flex bg-[#F6E6D8]"
           >
             <button
               onClick={() => setIsOpen(false)}
@@ -70,24 +68,18 @@ export default function FullscreenNavbar() {
                   key={item.label}
                   href={item.link}
                   onMouseEnter={() => setActiveIndex(index)}
-                  //   onMouseLeave={() => setActiveIndex(null)}
-                  className={`
-    text-[6vw] leading-none text-center font-extrabold uppercase cursor-pointer
-    transition-all duration-300
-    ${
-      activeIndex === null
-        ? "text-[#4B2E1F]"
-        : activeIndex === index
-          ? "text-[#4B2E1F] opacity-100"
-          : "opacity-30"
-    }
-  `}
+                  className={`text-[6vw] leading-none text-center font-extrabold uppercase cursor-pointer transition-all duration-300${
+                    activeIndex === null
+                      ? "text-[#4B2E1F]"
+                      : activeIndex === index
+                        ? "text-[#4B2E1F] opacity-100"
+                        : "opacity-30"
+                  }`}
                 >
                   {item.label}
                 </Link>
               ))}
 
-              {/* SOCIALS */}
               <div className="mt-12 font-sans flex justify-center gap-8 text-sm text-[#4B2E1F]">
                 <span>YouTube</span>
                 <span>Instagram</span>
@@ -95,7 +87,6 @@ export default function FullscreenNavbar() {
               </div>
             </div>
 
-            {/* RIGHT IMAGE PREVIEW */}
             <div className="w-1/2 relative overflow-hidden">
               <AnimatePresence mode="wait">
                 <AnimatePresence mode="wait">

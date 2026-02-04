@@ -16,7 +16,7 @@ export default function Preloader({
   useEffect(() => {
     const controls = animate(progress, 100, {
       duration: 2.4,
-      ease: [0.77, 0, 0.175, 1], // premium easing
+      ease: [0.77, 0, 0.175, 1],
       onUpdate: (v) => setDisplay(Math.round(v)),
       onComplete: () => {
         setTimeout(() => {
@@ -33,7 +33,7 @@ export default function Preloader({
       className="fixed inset-0 z-9999 flex flex-col items-center justify-center bg-[#5A3522]"
       initial={{ y: 0 }}
       animate={{ y: 0 }}
-      exit={{ y: "-100%" }}   // 👈 SLIDE UP
+      exit={{ y: "-100%" }}
       transition={{
         duration: 1.1,
         ease: [0.77, 0, 0.175, 1],
@@ -54,9 +54,8 @@ export default function Preloader({
         />
       </motion.div>
 
-      {/* PROGRESS */}
       <div className="absolute bottom-24 flex flex-col items-center gap-4 w-65">
-        <span className="text-[#F6E6D8] font-semibold tracking-wide">
+        <span className="text-[#F6E6D8] fontt-sans font-semibold tracking-wide">
           {display} %
         </span>
 

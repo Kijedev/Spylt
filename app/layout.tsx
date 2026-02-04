@@ -8,11 +8,6 @@ import { useState } from "react";
 import Preloader from "@/app/components/Preloader";
 import SmoothScroll from "@/app/Provider/page";
 
-// export const metadata: Metadata = {
-//   title: "Spylt",
-//   description: "Discover the best lactose-free milk alternatives.",
-// };
-
 export default function RootLayout({
   children,
 }: Readonly<{

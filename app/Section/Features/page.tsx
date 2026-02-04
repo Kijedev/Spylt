@@ -49,7 +49,6 @@ export default function page() {
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
           className="inline-block bg-[#7F3B2D] border-4 border-[#222123] px-6 lg:-mt-12 -mt-6 rotate-4"
-          //   style={{ transform: "rotate(-2deg)" }}
         >
           <h2 className="text-[3rem] lg:text-[9rem] text-[#FAEADE] tracking-tight">
             Infinitely recyclable
@@ -64,7 +63,6 @@ export default function page() {
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
           className="inline-block bg-[#FED775] border-4 border-[#222123] px-6 lg:-mt-4 -mt-6 -rotate-4 relative -z-20"
-          //   style={{ transform: "rotate(-2deg)" }}
         >
           <h2 className="text-[3rem] lg:text-[9rem] text-[#222123] tracking-tight">
             Lactose free
