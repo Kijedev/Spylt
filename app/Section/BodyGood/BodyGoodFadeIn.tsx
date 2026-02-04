@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 
-const text = "Freaking Delicious";
+const text = "IT STILL DOES";
 
 export default function AnimatedTitle() {
   return (
     <motion.h1
-      className="text-[#523122] lg:text-[8rem] text-[2rem] lg:mt-2 mt-10 font-bold flex justify-center"
+      className="text-[#523122] lg:text-[7.2rem] text-[7rem] lg:mt-0 -mt-32 w-full font-bold flex tracking-wide"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.6 }}
@@ -15,7 +15,7 @@ export default function AnimatedTitle() {
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: 0.03,
+            staggerChildren: 0.08,
           },
         },
       }}
@@ -23,7 +23,7 @@ export default function AnimatedTitle() {
       {text.split(",").map((letter, index) => (
         <motion.span
           key={index}
-          className="inline-block goldman"
+          className="inline-block"
           variants={{
             hidden: {
               opacity: 0,
@@ -33,7 +33,7 @@ export default function AnimatedTitle() {
               opacity: 1,
               y: 0,
               transition: {
-                duration: 1,
+                duration: 1.5,
                 ease: "easeOut",
               },
             },

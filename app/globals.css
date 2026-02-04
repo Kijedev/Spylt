@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 body {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+  background-color: #222123;
 }
 
 .fontSplyt {
-  font-family: 'Lobster', system-ui;
+  font-family: "Lobster", system-ui;
 }

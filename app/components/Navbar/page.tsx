@@ -4,20 +4,21 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGripLines } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 import "@fontsource/lobster";
 
 const menuItems = [
-  { label: "SHOP", image: "/Image/shop.png" },
-  { label: "FIND IN STORES", image: "/Image/4.png" },
-  { label: "ABOUT US", image: "/Image/1.jpg" },
-  { label: "TASTY TALKS", image: "/Image/3.jpg" },
-  { label: "PROGRAMS", image: "/Image/6.jpg" },
-  { label: "CONTACTS", image: "/Image/7.jpg" },
+  { label: "SHOP", link: "/shop", image: "/Image/shop.png" },
+  { label: "FIND IN STORES", link: "/stores", image: "/Image/4.png" },
+  { label: "ABOUT US", link: "/about", image: "/Image/1.jpg" },
+  { label: "TASTY TALKS", link: "/tasty-talks", image: "/Image/3.jpg" },
+  { label: "PROGRAMS", link: "/programs", image: "/Image/6.jpg" },
+  { label: "CONTACTS", link: "/contacts", image: "/Image/7.jpg" },
 ];
 
 export default function FullscreenNavbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
     <>
@@ -65,16 +66,25 @@ export default function FullscreenNavbar() {
             {/* LEFT NAV */}
             <div className="w-1/2 flex flex-col justify-center pl-24">
               {menuItems.map((item, index) => (
-                <motion.h2
+                <Link
                   key={item.label}
+                  href={item.link}
                   onMouseEnter={() => setActiveIndex(index)}
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="text-[6vw] leading-none text-center font-extrabold uppercase text-[#4B2E1F] cursor-pointer"
+                  //   onMouseLeave={() => setActiveIndex(null)}
+                  className={`
+    text-[6vw] leading-none text-center font-extrabold uppercase cursor-pointer
+    transition-all duration-300
+    ${
+      activeIndex === null
+        ? "text-[#4B2E1F]"
+        : activeIndex === index
+          ? "text-[#4B2E1F] opacity-100"
+          : "opacity-30"
+    }
+  `}
                 >
                   {item.label}
-                </motion.h2>
+                </Link>
               ))}
 
               {/* SOCIALS */}
@@ -88,16 +98,18 @@ export default function FullscreenNavbar() {
             {/* RIGHT IMAGE PREVIEW */}
             <div className="w-1/2 relative overflow-hidden">
               <AnimatePresence mode="wait">
-                <motion.img
-                  key={activeIndex}
-                  src={menuItems[activeIndex].image}
-                  alt=""
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={activeIndex}
+                    src={menuItems[activeIndex ?? 0].image}
+                    alt=""
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </AnimatePresence>
               </AnimatePresence>
             </div>
           </motion.div>

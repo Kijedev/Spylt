@@ -22,9 +22,9 @@ export default function RightAroundCorner() {
                     whileInView={{ opacity: 1, x: 0, rotate: -2 }}
                     viewport={{ once: true, amount: 0.6 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="inline-block bg-[#E9AA56] px-6 -mt-12 rotate-[5deg]"
+                    className="inline-block bg-[#E9AA56] px-6 lg:-mt-12 mt-0 rotate-[5deg]"
                 >
-                    <h2 className="text-3xl lg:text-[7rem] font-extrabold text-[#523122] tracking-tight">
+                    <h2 className="text-[4rem] lg:text-[7rem] font-extrabold text-[#523122] tracking-tight">
                         THE CORNER
                     </h2>
                 </motion.div>
