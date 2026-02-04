@@ -7,7 +7,7 @@ const text = "IT STILL DOES";
 export default function AnimatedTitle() {
   return (
     <motion.h1
-      className="text-[#523122] lg:text-[7.2rem] text-[7rem] lg:mt-0 -mt-32 w-full font-bold flex tracking-wide"
+      className="text-[#523122] lg:text-[8rem] text-[4rem] lg:mt-0 -mt-32 w-full font-bold flex tracking-wide lg:leading-48 leading-22"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.6 }}

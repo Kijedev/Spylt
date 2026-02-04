@@ -25,25 +25,25 @@ export function AppleCardsCarouselDemo() {
   return (
     <section className="w-full min-h-screen bg-[#FAEADE]">
       <div className="flex items-center">
-        <div className="max-w-full mx-auto grid grid-cols-2 gap-20 items-center px-10">
+        <div className="max-w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center px-10">
           {/* TEXT SECTION */}
           <section className="relative flex justify-center">
-            <div className="relative z-10 text-center flex flex-col items-center">
-              <h1 className="text-[7vw] leading-[0.95] font-extrabold uppercase text-[#523122]">
+            <div className="relative z-10 text-center flex flex-col items-center lg:mt-0 mt-20">
+              <h1 className="lg:text-[7vw] text-[3rem] leading-[0.95] font-extrabold uppercase text-[#523122]">
                 WE HAVE 6
               </h1>
 
               <motion.div
                 ref={fuelRef}
                 style={{ scaleX, opacity, originX: 0.5 }}
-                className="inline-block bg-[#A26833] px-8 rotate-[-4deg] border-6 border-[#FAEADE] -mt-6"
+                className="inline-block bg-[#A26833] px-8 rotate-[-4deg] border-6 border-[#FAEADE] lg:-mt-10 -mt-2"
               >
-                <span className="text-[7vw] font-extrabold uppercase text-[#FAEADE] whitespace-nowrap">
+                <span className="lg:text-[6vw] text-[3rem] font-extrabold uppercase text-[#FAEADE] whitespace-nowrap">
                   FREAKING
                 </span>
               </motion.div>
 
-              <h1 className="text-[7vw] leading-[0.95] font-extrabold uppercase text-[#523122] -mt-4">
+              <h1 className="lg:text-[7vw] text-[3rem] leading-[0.95] font-extrabold uppercase text-[#523122] lg:-mt-4">
                 DELICIOUS FLAVORS
               </h1>
             </div>

@@ -34,7 +34,7 @@ export default function FullscreenNavbar() {
         </span>
         <button
           onClick={() => setIsOpen(true)}
-          className="text-[#7A3A2A] cursor-pointer"
+          className="text-[#7A3A2A] cursor-pointer lg:flex hidden"
         >
           <FaGripLines className="text-4xl" />
         </button>

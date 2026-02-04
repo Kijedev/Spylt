@@ -91,14 +91,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     <CarouselContext.Provider
       value={{ onCardClose: handleCardClose, currentIndex }}
     >
-      <div className="relative w-full over">
+      <div className="relative w-full overflow-x-hidden">
         <div
           className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:py-20"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
           <div
-            className={cn("flex justify-start gap-4 pl-4", "mx-auto max-w-4xl")}
+            className={cn("flex lg:flex-row flex-col gap-4 pl-4", "mx-auto max-w-4xl")}
           >
             {items.map((item, index) => (
               <motion.div

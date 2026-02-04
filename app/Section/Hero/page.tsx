@@ -1,7 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import FreakingFadeIn from "@/app/Section/Hero/FreakingFadeIn";
-import Navbar from "@/app/components/Navbar/page";
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -13,9 +12,6 @@ export default function Hero() {
       style={{ rotate }}
       className="relative w-full h-screen overflow-hidden bg-[#222123] origin-center"
     >
-      <Navbar />
-
-      {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         src="/Video/header.mp4"
@@ -26,7 +22,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col gap-16 justify-center items-center">
+      <div className="relative z-10 h-full flex flex-col lg:gap-16 gap-6 justify-center items-center">
         <div className="flex flex-col justify-center items-center">
           <FreakingFadeIn />
 
@@ -35,9 +31,9 @@ export default function Hero() {
             whileInView={{ opacity: 1, x: 0, rotate: -2 }}
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="inline-flex bg-[#A26833] px-2 -rotate-1 -mt-12 border-6 border-[#FCE1CD]"
+            className="inline-flex bg-[#A26833] px-2 -rotate-1 lg:-mt-12 -mt-6 border-6 border-[#FCE1CD]"
           >
-            <h1 className="text-3xl lg:text-[8rem] text-[#FCE1CD]">
+            <h1 className="text-[3rem] lg:text-[8rem] text-[#FCE1CD]">
               PROTEIN + CAFFEINE
             </h1>
           </motion.div>

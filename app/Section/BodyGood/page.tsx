@@ -22,7 +22,7 @@ export default function BodyGood() {
           backgroundPosition: "center",
         }}
       >
-        <div className="flex justify-between items-center pt-32">
+        <div className="flex lg:flex-row flex-col justify-between items-center lg:pt-32 pt-56">
           {/* Content */}
           <div className="max-w-2xl">
             <BodyGoodFadeIn />
@@ -32,40 +32,40 @@ export default function BodyGood() {
               whileInView={{ opacity: 1, x: 0, rotate: -2 }}
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="inline-block bg-[#A26833] border-4 border-[#E2D4BC] px-6 -mt-12"
+              className="inline-block bg-[#A26833] border-4 border-[#E2D4BC] px-6 lg:-mt-12"
               style={{ transform: "rotate(-2deg)" }}
             >
-              <h2 className="text-3xl lg:text-[8rem] text-[#E2D4BC] tracking-tight">
+              <h2 className="text-[4rem] lg:text-[7rem] text-[#E2D4BC] tracking-tight">
                 BODY GOOD
               </h2>
             </motion.div>
           </div>
 
-          <div>
-            <h1 className="text-[#523122] font-sans text-right max-w-sm mx-auto">
+          <div className="lg:mt-0 mt-10">
+            <h1 className="text-[#523122] font-sans lg:text-right max-w-sm mx-auto">
               Milk contains a wide array of nutrients, including vitamin,
               minerals, and protein, and thtis is lactose free
             </h1>
           </div>
         </div>
 
-        <section className="text-6xl bg-[#FDEBD2] mt-20 border-6 border-[#E5D9C4] rounded-full flex justify-around px-8 py-4">
-          <div className="text-[#A26833] border-r border-[#A26833] px-10">
+        <section className="text-6xl bg-[#FDEBD2] mt-20 border-6 border-[#E5D9C4] lg:rounded-full rounded-lg flex lg:flex-row flex-col justify-around px-8 py-4 lg:mb-0 mb-10">
+          <div className="text-[#A26833] lg:border-r border-[#A26833] px-10">
             <p className=" text-[#A26833] font-sans text-xl">Potassium </p>
             <p className="text-sm text-[#A26833] mt-4 font-sans">up to</p>
             <h1 className="text-4xl">245mg</h1>
           </div>
-          <div className="text-[#A26833] border-r border-[#A26833] px-10">
+          <div className="text-[#A26833] lg:border-r border-[#A26833] px-10">
             <p className=" text-[#A26833] font-sans text-xl">Calcium </p>
             <p className="text-sm text-[#A26833] mt-4 font-sans">up to</p>
             <h1 className="text-4xl">500mg</h1>
           </div>
-          <div className="text-[#A26833] border-r border-[#A26833] px-10">
+          <div className="text-[#A26833] lg:border-r border-[#A26833] px-10">
             <p className=" text-[#A26833] font-sans text-xl">Vitamin A </p>
             <p className="text-sm text-[#A26833] mt-4 font-sans">up to</p>
             <h1 className="text-4xl">176mcg</h1>
           </div>
-          <div className="text-[#A26833] border-r border-[#A26833] px-10">
+          <div className="text-[#A26833] lg:border-r border-[#A26833] px-10">
             <p className=" text-[#A26833] font-sans text-xl">Vitamin D</p>
             <p className="text-sm text-[#A26833] mt-4 font-sans">up to</p>
             <h1 className="text-4xl">5mcg</h1>
