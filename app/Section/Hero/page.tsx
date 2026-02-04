@@ -39,7 +39,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <p className="text-[#523122] max-w-md text-center font-sans">
+        <p className="text-[#523122] max-w-md lg:px-0 px-6 text-center font-sans">
           Live life to the fullest with SPYLT: Shatter boredom and embrace your
           inner kid with every deliciously smooth chug.
         </p>

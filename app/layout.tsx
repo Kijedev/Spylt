@@ -6,6 +6,12 @@ import "./globals.css";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Preloader from "@/app/components/Preloader";
+import SmoothScroll from "@/app/Provider/page";
+
+// export const metadata: Metadata = {
+//   title: "Spylt",
+//   description: "Discover the best lactose-free milk alternatives.",
+// };
 
 export default function RootLayout({
   children,
@@ -16,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <AnimatePresence>
-        {loading && <Preloader onComplete={() => setLoading(false)} />}
-      </AnimatePresence>
+        <SmoothScroll>
+          <Navbar />
+          <AnimatePresence>
+            {loading && <Preloader onComplete={() => setLoading(false)} />}
+          </AnimatePresence>
 
-      {!loading && children}
+          {!loading && children}
+        </SmoothScroll>
       </body>
     </html>
   );

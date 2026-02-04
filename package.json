@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource/bebas-neue": "^5.2.7",
     "@fontsource/lobster": "^5.2.8",
+    "@studio-freight/lenis": "^1.0.42",
     "@tabler/icons-react": "^3.36.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.31.0",

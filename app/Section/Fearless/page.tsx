@@ -49,9 +49,9 @@ export default function StirUpSection() {
             duration: 1,
             ease: "easeOut",
           }}
-          className="max-w-sm mx-auto flex justify-center items-center text-center mt-6"
+          className="max-w-lg mx-auto flex justify-center items-center text-center mt-6"
         >
-          <p className="text-white font-sans text-sm lg:text-md">
+          <p className="text-white font-sans text-sm lg:text-lg">
             Rev up your rebel spirit and feed the adventure of life with SPYLT,
             where you’re one chug away from epic nostalgia and fearless fun.
           </p>
