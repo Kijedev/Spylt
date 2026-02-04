@@ -1,3 +1,4 @@
+import ChugFadeIn from "@/app/components/Footer/ChugFadeIn"
 import { FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa";
@@ -17,11 +18,12 @@ export default function Footer() {
             <div className="absolute inset-0" />
 
             {/* Content on top */}
-            <div className="relative z-10 h-full flex flex-col justify-between px-6 py- text-white">
+            <div className="relative z-10 h-full flex flex-col justify-between px-6 py-10 text-white">
                 {/* Top Text */}
-                <h1 className="text-4xl md:text-[6rem] font-bold tracking-tight text-[#FAEADE] text-center">
+                {/* <h1 className="text-4xl md:text-[6rem] font-bold tracking-tight text-[#FAEADE] text-center">
                     #CHUGRESPONSIBLY
-                </h1>
+                </h1> */}
+                <ChugFadeIn />
 
                 <div>
                     <div className="flex justify-center gap-5 text-[#FAEADE]">
