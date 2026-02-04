@@ -1,10 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import ChugFadeIn from "@/app/components/Footer/ChugFadeIn";
+import FreakingFadeIn from "@/app/Section/Hero/FreakingFadeIn";
+import Navbar from "@/app/components/Navbar/page";
 
 export default function Hero() {
   return (
-    <footer className="relative w-full h-screen overflow-hidden bg-[#222123]">
+    <header className="relative w-full h-screen overflow-hidden bg-[#222123]">
+      <Navbar />
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -19,10 +21,8 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col gap-16 justify-center items-center">
         <div className="flex flex-col justify-center items-center">
-        {/* <ChugFadeIn /> */}
-          <h1 className="text-[#523122] lg:text-[8rem]">
-            FREAKING DELICIOUS
-          </h1>
+          <FreakingFadeIn />
+          {/* <h1 className="text-[#523122] lg:text-[8rem]">FREAKING DELICIOUS</h1> */}
           <motion.div
             initial={{ opacity: 0, x: -80, rotate: -4 }}
             whileInView={{ opacity: 1, x: 0, rotate: -2 }}
@@ -45,6 +45,6 @@ export default function Hero() {
           CHUG A SPYLT
         </button>
       </div>
-    </footer>
+    </header>
   );
 }
