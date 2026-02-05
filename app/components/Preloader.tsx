@@ -55,7 +55,7 @@ export default function Preloader({
       </motion.div>
 
       <div className="absolute bottom-24 flex flex-col items-center gap-4 w-65">
-        <span className="text-[#F6E6D8] fontt-sans font-semibold tracking-wide">
+        <span className="text-[#F6E6D8] font-semibold tracking-wide text-4xl">
           {display} %
         </span>
 

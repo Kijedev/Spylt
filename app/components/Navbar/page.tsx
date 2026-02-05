@@ -23,14 +23,17 @@ export default function FullscreenNavbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-8 py-6">
-        <span className="cursor-pointer hover:scale-110 transition-transform duration-200">
+        <Link
+          href="/"
+          className="cursor-pointer hover:scale-110 transition-transform duration-200"
+        >
           <Image
             src="/Image/logo.svg"
             width={100}
             height={100}
             alt="SPYLT Logo"
           />
-        </span>
+        </Link>
         <button
           onClick={() => setIsOpen(true)}
           className="text-[#7A3A2A] cursor-pointer lg:flex hidden"
@@ -68,19 +71,13 @@ export default function FullscreenNavbar() {
                   key={item.label}
                   href={item.link}
                   onMouseEnter={() => setActiveIndex(index)}
-                  className={`text-[6vw] leading-none text-center font-extrabold uppercase cursor-pointer transition-all duration-300${
-                    activeIndex === null
-                      ? "text-[#4B2E1F]"
-                      : activeIndex === index
-                        ? "text-[#4B2E1F] opacity-100"
-                        : "opacity-30"
-                  }`}
+                  className="text-[6vw] text-[#4B2E1F]/30 hover:text-[#4B2E1F] leading-none text-center font-extrabold uppercase cursor-pointer transition-all duration-300"
                 >
                   {item.label}
                 </Link>
               ))}
 
-              <div className="mt-12 font-sans flex justify-center gap-8 text-sm text-[#4B2E1F]">
+              <div className="mt-12 font-sans flex justify-center gap-8 text-lg text-[#4B2E1F]">
                 <span>YouTube</span>
                 <span>Instagram</span>
                 <span>TikTok</span>

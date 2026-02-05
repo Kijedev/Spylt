@@ -15,11 +15,10 @@ export default function page() {
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: false, amount: 0.6 }}
           transition={{
-            duration: 0.6,
+            duration: 1,
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
-          className="inline-block bg-[#C88E64] border-4 border-[#222123] relativ z-50 px-6 lg:-mt-12 rotate-2"
-          //   style={{ transform: "rotate(-2deg)" }}
+          className="inline-block bg-[#C88E64] border-4 border-[#222123] relativ z-10 px-6 lg:-mt-12 rotate-2"
         >
           <h2 className="text-[3rem] lg:text-[9rem] text-[#E2D4BC] tracking-tight">
             SHELF STABLE
@@ -30,7 +29,7 @@ export default function page() {
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: false, amount: 0.6 }}
           transition={{
-            duration: 0.6,
+            duration: 1,
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
           className="inline-block bg-[#FAEADE] border-4 border-[#222123] px-6 lg:-mt-12 -mt-6 rotate-0"
@@ -45,7 +44,7 @@ export default function page() {
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: false, amount: 0.6 }}
           transition={{
-            duration: 0.6,
+            duration: 1,
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
           className="inline-block bg-[#7F3B2D] border-4 border-[#222123] px-6 lg:-mt-12 -mt-6 rotate-4"
@@ -59,7 +58,7 @@ export default function page() {
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: false, amount: 0.6 }}
           transition={{
-            duration: 0.6,
+            duration: 1,
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
           className="inline-block bg-[#FED775] border-4 border-[#222123] px-6 lg:-mt-4 -mt-6 -rotate-4 relative -z-20"

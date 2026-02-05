@@ -15,7 +15,7 @@ export default function AnimatedTitle() {
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: 0.03,
+            staggerChildren: 0.08,
           },
         },
       }}

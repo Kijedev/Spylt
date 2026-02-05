@@ -27,11 +27,14 @@ export default function Hero() {
           <FreakingFadeIn />
 
           <motion.div
-            initial={{ opacity: 0, x: -80, rotate: -4 }}
-            whileInView={{ opacity: 1, x: 0, rotate: -2 }}
-            viewport={{ once: true, amount: 0.6 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="inline-flex bg-[#A26833] px-2 -rotate-1 lg:-mt-12 -mt-6 border-6 border-[#FCE1CD]"
+            initial={{ scaleX: 0, opacity: 0 }}
+            whileInView={{ scaleX: 1, opacity: 1 }}
+            viewport={{ once: false, amount: 0.6 }}
+            transition={{
+              duration: 1,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+            className="flex bg-[#A26833] px-2 -rotate-3 lg:-mt-12 -mt-6 border-6 border-[#FCE1CD]"
           >
             <h1 className="text-[3rem] lg:text-[8rem] text-[#FCE1CD]">
               PROTEIN + CAFFEINE

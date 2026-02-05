@@ -49,7 +49,7 @@ export default function BodyGood() {
           </div>
         </div>
 
-        <section className="text-6xl bg-[#FDEBD2] mt-20 border-6 border-[#E5D9C4] lg:rounded-full rounded-lg flex lg:flex-row flex-col justify-around px-8 py-4 lg:mb-0 mb-10">
+        <section className="text-6xl bg-[#FDEBD2] mt-20 border-6 border-[#E5D9C4] lg:rounded-full rounded-lg flex lg:inline-flex lg:flex-row flex-col justify-center gap-20 px-8 py-4 lg:mb-0 mb-10">
           <div className="text-[#A26833] lg:border-r border-[#A26833] px-10">
             <p className=" text-[#A26833] font-sans text-xl">Potassium </p>
             <p className="text-sm text-[#A26833] mt-4 font-sans">up to</p>

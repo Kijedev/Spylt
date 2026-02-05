@@ -23,6 +23,8 @@ interface CarouselProps {
 }
 
 type Card = {
+  toppins: any;
+  bg: any;
   src: string;
   title: string;
   category: string;
@@ -98,7 +100,10 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           onScroll={checkScrollability}
         >
           <div
-            className={cn("flex lg:flex-row flex-col gap-4 pl-4", "mx-auto max-w-4xl")}
+            className={cn(
+              "flex lg:flex-row flex-col gap-4 pl-4",
+              "mx-auto max-w-4xl",
+            )}
           >
             {items.map((item, index) => (
               <motion.div
@@ -233,8 +238,20 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-x-hidden rounded-3xl bg-none md:h-160 md:w-96"
+        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-x-hidden rounded-3xl md:h-160 md:w-120"
+        style={{
+          backgroundImage: `url(${card.bg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
+        <Image
+          src={card.toppins}
+          width="100"
+          height="100"
+          className="relative z-50 w-full h-full object-contain mt-4 px-4"
+          alt={card.title + " toppins"}
+        />
         {/* <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-linear-to-b from-black/50 via-transparent to-transparent" /> */}
         <div className="absolute bottom-0 z-40 p-8">
           {/* <motion.p
