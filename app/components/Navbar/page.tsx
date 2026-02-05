@@ -29,8 +29,8 @@ export default function FullscreenNavbar() {
         >
           <Image
             src="/Image/logo.svg"
-            width={100}
-            height={100}
+            width={80}
+            height={80}
             alt="SPYLT Logo"
           />
         </Link>
@@ -40,7 +40,7 @@ export default function FullscreenNavbar() {
         >
           <FaGripLines className="text-4xl" />
         </button>
-        <span className="px-6 py-2 rounded-full bg-white text-[#7A3A2A] font-semibold">
+        <span className="px-6 py-2 rounded-full bg-white text-[#7A3A2A]">
           FIND IN STORES
         </span>
       </nav>

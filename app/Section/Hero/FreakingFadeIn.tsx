@@ -7,7 +7,7 @@ const text = "Freaking Delicious";
 export default function AnimatedTitle() {
   return (
     <motion.h1
-      className="text-[#523122] lg:text-[8rem] text-[3rem] lg:mt-2 mt-10 font-bold flex justify-center lg:leading-48 leading-22"
+      className="text-[#523122] lg:text-[7rem] text-[3rem] lg:mt-2 mt-10 font-bold flex justify-center lg:leading-48 leading-22"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.6 }}

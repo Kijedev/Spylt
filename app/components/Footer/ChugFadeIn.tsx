@@ -7,7 +7,7 @@ const text = "#CHUGRESPONSIBLY";
 export default function AnimatedTitle() {
   return (
     <motion.h1
-      className="text-[#FAEADE] lg:text-[5rem] text-[2rem] lg:mt-2 mt-10 font-bold flex justify-center"
+      className="text-[#FAEADE] lg:text-[8rem] text-[2rem] lg:mt-2 mt-10 font-bold flex justify-center"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.6 }}

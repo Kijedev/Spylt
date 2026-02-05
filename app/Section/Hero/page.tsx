@@ -36,7 +36,7 @@ export default function Hero() {
             }}
             className="flex bg-[#A26833] px-2 -rotate-3 lg:-mt-12 -mt-6 border-6 border-[#FCE1CD]"
           >
-            <h1 className="text-[3rem] lg:text-[8rem] text-[#FCE1CD]">
+            <h1 className="text-[3rem] lg:text-[7rem] text-[#FCE1CD]">
               PROTEIN + CAFFEINE
             </h1>
           </motion.div>

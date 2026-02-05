@@ -19,18 +19,16 @@ export default function Footer() {
       <div className="relative z-10 h-full flex flex-col justify-between px-6 py-10 text-white">
         <ChugFadeIn />
 
-        <div>
-          <div className="flex justify-center gap-5 text-[#FAEADE]">
-            <FaYoutube className="border border-[#FAEADE]/20 text-4xl w-20 h-20 rounded-full p-6 hover:bg-white/5 cursor-pointer" />
-            <AiFillInstagram className="border border-[#FAEADE]/20 text-4xl w-20 h-20 rounded-full p-6 hover:bg-white/5 cursor-pointer" />
-            <FaTiktok className="border border-[#FAEADE]/20 text-4xl w-20 h-20 rounded-full p-6 hover:bg-white/5 cursor-pointer" />
-          </div>
+        <div className="flex justify-center gap-5 text-[#FAEADE] lg:-mt-20">
+          <FaYoutube className="border border-[#FAEADE]/20 text-4xl w-20 h-20 rounded-full p-6 hover:bg-white/5 cursor-pointer" />
+          <AiFillInstagram className="border border-[#FAEADE]/20 text-4xl w-20 h-20 rounded-full p-6 hover:bg-white/5 cursor-pointer" />
+          <FaTiktok className="border border-[#FAEADE]/20 text-4xl w-20 h-20 rounded-full p-6 hover:bg-white/5 cursor-pointer" />
         </div>
 
         <div className="flex lg:flex-row flex-col justify-between text-[#FAEADE] text-sm">
-          <div className="flex lg:flex-row flex-col lg:gap-20 gap-10">
-            <p className="mb-2 text-lg">SPYLT Flavors</p>
-            <div className="text-lg">
+          <div className="flex lg:flex-row flex-col lg:gap-20 gap-10 font-sans">
+            <p className="mb-2 text-md">SPYLT Flavors</p>
+            <div className="text-md">
               <ul className="space-y-1 opacity-80">
                 <li>Chug Club</li>
                 <li>Student Marketing</li>
@@ -38,7 +36,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="text-lg">
+            <div className="text-md">
               <p className="mb-2">Company</p>
               <ul className="space-y-1 opacity-80">
                 <li>Contacts</li>
@@ -48,7 +46,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <p className="mb-3 text-lg max-w-lg text-[#FAEADE]">
+            <p className="mb-3 text-lg max-w-lg text-[#FAEADE] font-sans">
               Get Exclusive Early Access and Stay Informed About Product
               Updates, Events, and More!
             </p>
@@ -63,7 +61,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-4 justify-between text-[#FAEADE]">
+        <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-4 justify-between text-[#FAEADE]/50 font-sans">
           <span>Copyright © 2025 Spylt - All Rights Reserved</span>
           <span className="flex gap-5">
             <p>Privacy Policy</p>
