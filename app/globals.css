@@ -8,3 +8,7 @@ body {
 .fontSplyt {
   font-family: "Lobster", system-ui;
 }
+
+.input {
+  @apply w-full rounded-2xl px-6 py-4 placeholder:font-sans bg-[#fbe8d9] text-[#4a2b1b] placeholder-[#4a2b1b]/60 focus:outline-none focus:ring-2 focus:ring-[#e4a85b];
+}

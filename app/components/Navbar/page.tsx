@@ -13,7 +13,7 @@ const menuItems = [
   { label: "ABOUT US", link: "/about", image: "/Image/1.jpg" },
   { label: "TASTY TALKS", link: "/tasty-talks", image: "/Image/3.jpg" },
   { label: "PROGRAMS", link: "/programs", image: "/Image/6.jpg" },
-  { label: "CONTACTS", link: "/contacts", image: "/Image/7.jpg" },
+  { label: "CONTACTS", link: "/Contact", image: "/Image/7.jpg" },
 ];
 
 export default function FullscreenNavbar() {
@@ -22,7 +22,7 @@ export default function FullscreenNavbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-8 py-6">
+      <nav className="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-8 py-6 overflow-hidden">
         <Link
           href="/"
           className="cursor-pointer hover:scale-110 transition-transform duration-200"
@@ -71,6 +71,7 @@ export default function FullscreenNavbar() {
                   key={item.label}
                   href={item.link}
                   onMouseEnter={() => setActiveIndex(index)}
+                  onClick={() => setIsOpen(false)} // 👈 CLOSE NAV ON CLICK
                   className="text-[6vw] text-[#4B2E1F]/30 hover:text-[#4B2E1F] leading-none text-center font-extrabold uppercase cursor-pointer transition-all duration-300"
                 >
                   {item.label}
