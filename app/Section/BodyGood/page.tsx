@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import BodyGoodFadeIn from "@/app/Section/BodyGood/BodyGoodFadeIn";
+import SearchFadeIn from "@/app/Stores/SearchFadeIn"
 
 export default function BodyGood() {
   return (
@@ -22,11 +23,11 @@ export default function BodyGood() {
           backgroundPosition: "center",
         }}
       >
-        <div className="flex lg:flex-row flex-col justify-between items-center lg:pt-32 pt-56">
+        <div className="flex lg:flex-row flex-col justify-between items-center lg:pt-32 pt-0">
           {/* Content */}
-          <div className="max-w-2xl">
-            <BodyGoodFadeIn />
-
+          <div className="">
+            {/* <BodyGoodFadeIn /> */}
+            <SearchFadeIn text="IT STILL DOES" />
             <motion.div
               initial={{ opacity: 0, x: -80, rotate: -4 }}
               whileInView={{ opacity: 1, x: 0, rotate: -2 }}

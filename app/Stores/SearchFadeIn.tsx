@@ -13,7 +13,7 @@ export default function AnimatedTitle({
 }: AnimatedTitleProps) {
   return (
     <motion.h1
-      className={`lg:text-[7rem] text-[3rem] lg:mt-2 mt-10 font-bold flex justify-center lg:leading-[12rem] leading-[4rem] ${color}`}
+      className={`lg:text-[7rem] text-[3rem] lg:mt-2 mt-10 font-bold flex lg:justify-center justify-left lg:leading-48 leading-16 ${color}`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.6 }}

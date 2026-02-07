@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import FrequentlyAsked from "@/app/Contact/FrequentlyAsked";
+import SearchFadeIn from "@/app/Stores/SearchFadeIn";
 import Footer from "../components/Footer/Footer";
 import FAQ from "@/app/Contact/FAQ";
 import "@fontsource/bebas-neue";
@@ -97,7 +97,8 @@ export default function ContactHero() {
 
       <div className="py-20">
         <div className="flex flex-col justify-center items-center">
-          <FrequentlyAsked />
+          <SearchFadeIn text="FREQUENTLY ASKED" />
+
 
           <motion.div
             initial={{ scaleX: 0, opacity: 0 }}

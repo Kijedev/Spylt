@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Carousel, Card } from "@/app/components/ui/appleCardsCarousel";
 import { section } from "framer-motion/client";
+import SearchFadeIn from "@/app/Stores/SearchFadeIn";
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
@@ -29,23 +30,28 @@ export function AppleCardsCarouselDemo() {
           {/* TEXT SECTION */}
           <section className="relative flex justify-center">
             <div className="relative z-10 text-center flex flex-col items-center lg:mt-0 mt-20">
-              <h1 className="lg:text-[7vw] text-[3rem] leading-[0.95] font-extrabold uppercase text-[#523122]">
+              <div>
+                <SearchFadeIn text="WE HAVE 6" />
+              </div>
+              {/* <h1 className="lg:text-[7vw] text-[3rem] leading-[0.95] font-extrabold uppercase text-[#523122]">
                 WE HAVE 6
-              </h1>
+              </h1> */}
 
               <motion.div
                 ref={fuelRef}
                 style={{ scaleX, opacity, originX: 0.5 }}
-                className="inline-block bg-[#A26833] px-8 rotate-[-4deg] border-6 border-[#FAEADE] lg:-mt-10 -mt-2"
+                className="inline-block bg-[#A26833] px-8 rotate-[-4deg] border-6 border-[#FAEADE] relative z-50 lg:mt-0 -mt-2"
               >
                 <span className="lg:text-[6vw] text-[3rem] font-extrabold uppercase text-[#FAEADE] whitespace-nowrap">
                   FREAKING
                 </span>
               </motion.div>
-
-              <h1 className="lg:text-[7vw] text-[3rem] leading-[0.95] font-extrabold uppercase text-[#523122] lg:-mt-4">
+              <div>
+                <SearchFadeIn text="DELICIOUS FLAVORS" />
+              </div>
+              {/* <h1 className="lg:text-[7vw] text-[3rem] leading-[0.95] font-extrabold uppercase text-[#523122] lg:-mt-4">
                 DELICIOUS FLAVORS
-              </h1>
+              </h1> */}
             </div>
           </section>
 

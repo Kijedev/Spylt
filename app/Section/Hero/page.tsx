@@ -1,6 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import FreakingFadeIn from "@/app/Section/Hero/FreakingFadeIn";
+import SearchFadeIn from "@/app/Stores/SearchFadeIn"
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -24,7 +25,8 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col lg:gap-16 gap-6 justify-center items-center">
         <div className="flex flex-col justify-center items-center">
-          <FreakingFadeIn />
+          {/* <FreakingFadeIn /> */}
+          <SearchFadeIn text="FREAKING DELICIOUS" />
 
           <motion.div
             initial={{ scaleX: 0, opacity: 0 }}

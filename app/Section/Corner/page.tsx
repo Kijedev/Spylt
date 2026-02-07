@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, cubicBezier } from "framer-motion";
-import CornerFadeIn from "@/app/Section/Corner/CornerFadeIn";
+import SearchFadeIn from "@/app/Stores/SearchFadeIn";
 
 export default function RightAroundCorner() {
   return (
@@ -15,7 +15,10 @@ export default function RightAroundCorner() {
     >
       {/* Content */}
       <div className="max-w-2xl">
-        <CornerFadeIn />
+        {/* <CornerFadeIn /> */}
+        <div className="lg:ml-0 -ml-32">
+          <SearchFadeIn text="RIGHT AROUND" color="text-white" />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, x: -80, rotate: -4 }}
