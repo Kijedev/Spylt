@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Home from "./Section/Home/Home";
+import Home from "./Home/Home";
 import "@fontsource/bebas-neue";
 import "./globals.css";
 
