@@ -12,7 +12,10 @@ export default function ContactHero() {
     <section className="bg-[#FAEADE]">
       <section
         className="min-h-screen grid grid-cols-1 lg:grid-cols-2"
-        style={{ backgroundImage: "url('/Image/cornerbg.svg')" }}
+        style={{
+          backgroundImage: "url('/Image/searchbg.webp')",
+          backgroundPosition: "center",
+        }}
       >
         {/* LEFT: Background Image */}
         <div
