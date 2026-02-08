@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useMemo, useRef } from "react";
 
 type Props = {
   lines: string[];
@@ -12,57 +12,54 @@ export default function ScrollRevealText({ lines }: Props) {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 90%", "end 10%"], // longer scroll window = slower reveal
+    offset: ["start 90%", "end 10%"],
   });
 
-  const allWords = lines.join(" ").split(" ");
-  let wordIndex = 0;
+  const words = useMemo(
+    () =>
+      lines.flatMap((line, lineIndex) =>
+        line.split(" ").map((word, wordIndex) => ({
+          word,
+          key: `${lineIndex}-${wordIndex}`,
+        }))
+      ),
+    [lines]
+  );
+
+  const opacities = words.map((_, i) => {
+    const start = i / words.length;
+    const end = start + 0.4 / words.length;
+    return useTransform(scrollYProgress, [start, end], [0.15, 1]);
+  });
+
+  let cursor = 0;
 
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center text-center gap-4 lg:gap-6"
+      className="text-center space-y-6"
     >
-      {lines.map((line, lineIndex) => {
-        const words = line.split(" ");
+      {lines.map((line, lineIndex) => (
+        <p
+          key={lineIndex}
+          className="text-[2rem] text-center lg:text-[7rem] text-[#FAEADE] font-extrabold uppercase leading-tight"
+        >
+          {line.split(" ").map((word, i) => {
+            const opacity = opacities[cursor];
+            cursor++;
 
-        return (
-          <div
-            key={lineIndex}
-            className="flex justify-center flex-wrap"
-          >
-            {words.map((word, i) => {
-              const start = wordIndex / allWords.length;
-              const end = start + 0.4 / allWords.length; // 👈 slows reveal per word
-
-              const opacity = useTransform(
-                scrollYProgress,
-                [start, end],
-                [0.15, 1]
-              );
-
-              wordIndex++;
-
-              return (
-                <motion.span
-                  key={`${word}-${i}`}
-                  style={{ opacity }}
-                  className="
-                    text-white
-                    font-bold
-                    lg:text-[7rem]
-                    text-[4rem]
-                    mr-4 lg:mr-6
-                    leading-tight
-                  "
-                >
-                  {word}
-                </motion.span>
-              );
-            })}
-          </div>
-        );
-      })}
+            return (
+              <motion.span
+                key={`${word}-${i}`}
+                style={{ opacity }}
+                className="lg:mr-10 inline-block"
+              >
+                {word}&nbsp;
+              </motion.span>
+            );
+          })}
+        </p>
+      ))}
     </div>
   );
 }

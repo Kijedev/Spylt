@@ -40,19 +40,19 @@ export default function FaqSection() {
         {/* Tabs */}
         <div className="flex justify-center gap-6 mb-16">
           {["orders", "products"].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab as "orders" | "products")}
-                className={`px-10 py-4 rounded-full border text-xl font-semibold transition cursor-pointer
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab as "orders" | "products")}
+              className={`px-10 py-4 rounded-full border text-xl font-semibold transition cursor-pointer
                   ${
                     activeTab === tab
                       ? "border-[#7a3b1c] text-[#7a3b1c]"
                       : "border-[#e0c3ae] text-[#c19a82]"
                   }`}
-              >
-                {tab === "orders" ? "ORDERS" : "PRODUCT QUESTIONS"}
-              </button>
-            ))}
+            >
+              {tab === "orders" ? "ORDERS" : "PRODUCT QUESTIONS"}
+            </button>
+          ))}
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 w-full">

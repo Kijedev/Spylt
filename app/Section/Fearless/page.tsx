@@ -18,14 +18,14 @@ export default function StirUpSection() {
   return (
     <section
       ref={fuelRef}
-      className="relative h-screen bg-[#7A3A2A] overflow-hidden px-6"
+      className="relative bg-[#7A3A2A] py-20 overflow-hidden px-6"
     >
       {/* FUEL UP — centered in the entire viewport */}
 
       {/* Content */}
-      <div className="relative w-full max-w-6xl mx-auto h-full flex flex-col justify-center text-center">
+      <div className="relative flex flex-col justify-center text-center">
         <ScrollRevealText
-          lines={["STIR UP YOUR FEARLESS", "PAST AND YOUR FUTURE"]}
+          lines={["STIR UP YOUR FEARLESS PAST AND YOUR FUTURE WITH EVERY GULP OF PERFECT PROTEIN"]}
         />
 
         <motion.div
@@ -50,7 +50,7 @@ export default function StirUpSection() {
           </span>
         </motion.div>
 
-        <ScrollRevealText lines={["WITH EVERY GULP OF PERFECT PROTEIN"]} />
+        {/* <ScrollRevealText lines={["WITH EVERY GULP OF PERFECT PROTEIN"]} /> */}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
